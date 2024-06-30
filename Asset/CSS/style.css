@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+
+    --primary-bg-color: #0b0f4d;
+    --white-bg-color: #fff;
+    --gray-line-color: #909090;
+    --text-black-color: #000;
+    --text-white-color: #fff;
+}
+
+
+
+
+.form-label {
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 20px;
+}
+
+.form-control {
+    height: 56px;
+    border-radius: 12px !important;
+}
+
+
+
+
+label {
+    font-size: 18px !important;
+    line-height: 20px !important;
+}
+
+
+
+
+/* chack list send into the right side  */
+
+.form-check.form-check-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px !important;
+
+
+}
+
+.form-check.form-check-right .form-check-input {
+    order: 2;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+}
+
+.form-check.form-check-right .form-check-label {
+    order: 1;
+    /* Ensure the label stays to the left */
+    width: calc(100% - 40px);
+}
+
+
+
+ol.circle-points {
+    display: flex;
+    padding-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+ol.circle-points li {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    color: var(--text-white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 10px;
+    position: relative;
+}
+
+ol.circle-points li .active {
+    background-color: var(--active-bg-color);
+}
+
+ol.circle-points li:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: calc(-50% - 50px);
+    top: 50%;
+    width: calc(100% - 20px + 20px);
+    height: 2px;
+    background-color: var(--line-color);
+    transform: translateY(-50%);
+}
